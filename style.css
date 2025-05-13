@@ -1,0 +1,158 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  background: #000;
+  border-bottom: 1px solid violet;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: violet;
+  font-size: 24px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: violet;
+}
+
+/* Blog Content */
+.blog-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.blog-post {
+  border-left: 4px solid violet;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+.post-title {
+  color: violet;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.post-date {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+.post-content {
+  font-size: 16px;
+}
+#about{
+  margin-left: 105px;
+  width: 600px;
+}
+button {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+
+  display: block;
+  margin: 0 auto;
+  border: 0.2em solid var(--glow-color);
+  padding: 0.5em 1.5em; /* Reduced padding */
+  color: var(--glow-color);
+  font-size: 13px; /* Smaller text */
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--btn-color);
+  border-radius: 0.75em; /* Slightly smaller radius */
+  outline: none;
+  box-shadow: 0 0 0.6em 0.2em var(--glow-color),
+              0 0 2.5em 0.8em var(--glow-spread-color),
+              inset 0 0 0.5em 0.2em var(--glow-color);
+  text-shadow: 0 0 0.4em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(1.5em); /* Slightly reduced blur */
+  opacity: 0.6;
+  transform: perspective(1em) rotateX(35deg) scale(1, 0.6);
+}
+
+button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 0.6em 0.2em var(--glow-color),
+              0 0 3em 1.5em var(--glow-spread-color),
+              inset 0 0 0.5em 0.2em var(--glow-color);
+}
+
+button:active {
+  box-shadow: 0 0 0.4em 0.2em var(--glow-color),
+              0 0 2em 1.5em var(--glow-spread-color),
+              inset 0 0 0.4em 0.2em var(--glow-color);
+}
+
+.connect-title{
+  display: flex;
+  justify-content: center;
+  color: violet;
+}
+#connectme {
+  background-color: #1e1e1e;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: left; 
+}
+
+.center-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box; 
+  margin-bottom: 10px;
+}
+
+
